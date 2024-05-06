@@ -166,7 +166,8 @@ button {
 .filter button:hover,
 .filter button:focus,
 .efective-solutions button,
-footer button {
+footer button,
+.backdrop .btn-send {
     color: var(--feng-white);
     background-color: var(--feng-pressed-state);
     border-color: var(--feng-pressed-state);
@@ -238,7 +239,9 @@ ul.social-icons svg {
 .efective-solutions button:hover,
 .efective-solutions button:focus,
 footer button:hover,
-footer button:focus {
+footer button:focus,
+.backdrop .btn-send:hover,
+.backdrop .btn-send:focus {
     color: initial;
     background-color: var(--feng-light);
     border: 1px solid var(--feng-accent);
@@ -426,7 +429,7 @@ footer button:focus {
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.backdrop .modal-btn {
+.backdrop .btn-close {
     position: absolute;
     top: 24px;
     right: 24px;
@@ -507,17 +510,11 @@ footer button:focus {
     fill: var(--feng-primary-brand);
 }
 
-.backdrop .person-agreement-wrapper input[type="checkbox"]:checked + label .person-agreement-checkbox {
-    fill: var(--feng-light);
-    background-color: var(--feng-pressed-state);
+.backdrop .person-agreement-wrapper {
+    margin-bottom: 24px;
 }
 
-.backdrop .person-agreement-wrapper a {
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-}
-
-.backdrop .person-agreement-checkbox {
+.backdrop .person-agreement-wrapper .person-agreement-checkbox {
     width: 16px;
     height: 16px;
     margin-right: 8px;
@@ -526,6 +523,25 @@ footer button:focus {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+}
+
+.backdrop .person-agreement-wrapper input + label .person-agreement-checkbox {
+    fill: none;
+}
+
+.backdrop .person-agreement-wrapper input[type="checkbox"]:checked + label .person-agreement-checkbox {
+    fill: var(--feng-light);
+    border-color: var(--feng-pressed-state);
+    background-color: var(--feng-pressed-state);
+}
+
+.backdrop .person-agreement-wrapper a {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+}
+
+.backdrop .btn-send {
+    padding: 16px 32px;
 }
 
 /* footer */
